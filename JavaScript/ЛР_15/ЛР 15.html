@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Интерфейсные события</title>
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid blue;}
+    </style>
+</head>
+<body>
+    <!--onclick="alert('всплытие не дойдёт до сюда 0_0')"-->
+    <!--пример-1-->
+    <input value="Click!" onclick="alert('Click!!!')" type="button">
+    <!--пример-2-->
+    <input value="Считать пирожки" onclick="countPirojok()" type="button">
+    <!--пример-3-->
+    <input id="elem" type="button" value="Click on me ^_^">
+    <!--пример-4-->
+    <button onclick="alert(this.innerHTML)">Click please</button>
+    <!--пример-5-6-->
+    <input id="elem1" type="button" value="Click on me :3">
+    <!--пример-8-->
+    <button onclick="event.stopPropagation()">Click on me 0_0</button>
+    <!--пример-7-->
+    <form onclick="alert('FORM')">FORM
+        <div onclick="alert('DIV')">DIV
+            <p onclick="alert('P')">P</p>
+        </div>
+    </form>
+   
+    <!--Интерфейсные события-->
+    <div id="mouseEventDiv">
+        <p id="mouseEvent">События мыши</p>
+        <button id="mouseButton">Наведи курсор</button>
+    </div>
+
+    <div id="keyboardEventDiv">
+        <p id="keyboardEvent">События клавиатуры</p>
+        <input type="text" id="keyboardInput">
+    </div>
+
+    <div id="dragDropEventDiv">
+        <p id="dragDropEvent">Drag & Drop события</p>
+        <div id="dragTarget" draggable="true">Перетащи меня</div>
+    </div>
+
+    <div id="pointerEventDiv">
+        <p id="pointerEvent">События указателя</p>
+        <div id="pointerTarget">Наведи указатель мыши на элемент.</div>
+    </div>
+
+    <div id="scrollEventDiv">
+        <p id="scrollEvent">События полосы прокрутки</p>
+        <div style="height: 2000px;"></div>
+    </div>
+
+    <div id="touchEventDiv">
+        <p id="touchEvent">События сенсорных экранов</p>
+    </div>
+
+    <div id = "timerrr">
+        <p><input type="button" value="Начать отсчёт" onclick="doTimer()"></p>
+	    <input type="text" id="txt">
+	    <p><input type="button" value="Остановить отсчёт" onclick="stopCount()"></p>
+    </div>   
+
+</body>
+<script src="events.js"></script>
+<script src="examples.js"></script>
+</html>
