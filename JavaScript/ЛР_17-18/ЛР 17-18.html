@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Валидация формы</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="email" pattern = "/^\S+@\S+\.\S+$/">Email:</label>
+        <input type="email" id="email" required><br>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$" required><br>
+
+        <label for="password">Пароль 2:</label>
+        <input type="password" id="password1"  required><br>
+
+        <button type="button" onclick="validateForm()">Проверить форму</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            var emailInput = document.getElementById("email");
+            var passwordInput = document.getElementById("password");
+            var passwordInput1 = document.getElementById("password1");
+
+            // Регулярное выражение для проверки пароля
+            var passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+            //Регулярное выражение для проверки почты
+            var emailPattern = /^\S+@\S+\.\S+$/;
+
+            if (passwordInput.checkValidity() && passwordInput.value.length > 8 && passwordInput1.value == passwordInput.value && passwordPattern.test(passwordInput1.value) && emailPattern.test(emailInput.value)) {
+                alert("Форма валидна.");
+            } 
+            else {
+                alert(" Пароли не совпадают. Форма невалидна.");
+            }
+        }
+    </script>
+</body>
+</html>
