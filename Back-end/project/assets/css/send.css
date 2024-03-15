@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column; /* Размещаем элементы в колонку */
+    justify-content: center;
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative; 
+    align-items: center;
+}
+
+.container {
+    background-color:rgb(176, 11, 11);
+
+    color: #FFF;
+    width: 300px;
+    min-height: 300px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+
+
+    display: flex;
+    flex-direction: column; /* Размещаем элементы в колонку */
+    justify-content: center;
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative; 
+    align-items: center;
+
+    padding: 2%;
+    
+    
+}
+
+h1{
+    text-align: center;
+    margin: 40px;
+}
+
+textarea{
+    resize: none;
+    width: 210px;
+    height: 200px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
